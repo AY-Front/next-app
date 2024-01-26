@@ -1,6 +1,7 @@
 import { auth } from '@/auth';
 
 import { inter } from '@/app/ui/fonts';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import '@/app/ui/global.css';
 
@@ -29,7 +30,10 @@ export default async function RootLayout({
           <div>
             {session?.user?.name} {session?.user?.email}
           </div>
-          <div className="flex-1">{children}</div>
+          <div className="flex-1">
+            {children}
+            <SpeedInsights />
+          </div>
         </div>
       </body>
     </html>
