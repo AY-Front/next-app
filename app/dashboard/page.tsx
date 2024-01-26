@@ -21,6 +21,8 @@ export default async function Page() {
     Rpcs.fetchCardData(),
   ]);
 
+  console.log(revenue);
+
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
